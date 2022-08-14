@@ -1,15 +1,40 @@
+import PropTypes from 'prop-types';
+import { Box } from 'components/Box/Box';
+import { Button, Number } from './Contacts.styled';
+
 export const Contacts = ({ contacts, onRemoveContact }) => {
   return (
-    <ul>
+    <Box as="ul" py={4}>
       {contacts.map(({ name, number, id }) => (
-        <li key={id}>
-          <h3>{name}</h3>
-          <p>{number}</p>
-          <button type="button" onClick={() => onRemoveContact(id)}>
+        <Box
+          as="li"
+          p={3}
+          display="flex"
+          width="300px"
+          justifyContent="space-between"
+          alignItems="center"
+          key={id}
+        >
+          <div>
+            <h3>{name}</h3>
+            <Number>{number}</Number>
+          </div>
+          <Button type="button" onClick={() => onRemoveContact(id)}>
             Delete
-          </button>
-        </li>
+          </Button>
+        </Box>
       ))}
-    </ul>
+    </Box>
   );
+};
+
+Contacts.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onRemoveContact: PropTypes.func.isRequired,
 };

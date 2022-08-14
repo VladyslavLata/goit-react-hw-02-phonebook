@@ -37,7 +37,7 @@ export class App extends Component {
   };
 
   changeFilter = e => {
-    this.setState({ name: e.currentTarget.value });
+    this.setState({ name: e.currentTarget.value.trimStart() });
   };
 
   getVisibleContacts = () => {
