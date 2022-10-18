@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { FilterHeader } from './Filter.styled';
 
 export const Filter = ({ filterHeader, value, onChange }) => {
@@ -12,8 +12,8 @@ export const Filter = ({ filterHeader, value, onChange }) => {
   );
 };
 
-Filter.propTypes = {
-  filterHeader: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
+// Filter.propTypes = {
+//   filterHeader: PropTypes.string.isRequired,
+//   value: PropTypes.string.isRequired,
+//   onChange: PropTypes.func.isRequired,
+// };

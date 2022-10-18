@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Box } from 'components/Box/Box';
 import { Button, Number } from './Contacts.styled';
 
@@ -28,13 +28,13 @@ export const Contacts = ({ contacts, onRemoveContact }) => {
   );
 };
 
-Contacts.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.exact({
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  onRemoveContact: PropTypes.func.isRequired,
-};
+// Contacts.propTypes = {
+//   contacts: PropTypes.arrayOf(
+//     PropTypes.exact({
+//       name: PropTypes.string.isRequired,
+//       number: PropTypes.string.isRequired,
+//       id: PropTypes.string.isRequired,
+//     })
+//   ).isRequired,
+//   onRemoveContact: PropTypes.func.isRequired,
+// };

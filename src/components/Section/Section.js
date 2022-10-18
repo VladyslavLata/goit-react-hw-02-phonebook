@@ -1,5 +1,5 @@
 import { Box } from 'components/Box/Box';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Title } from './Sectio.styled';
 
 export const Section = ({ title, children }) => (
@@ -9,6 +9,6 @@ export const Section = ({ title, children }) => (
   </Box>
 );
 
-Section.propTypes = {
-  title: PropTypes.string.isRequired,
-};
+// Section.propTypes = {
+//   title: PropTypes.string.isRequired,
+// };
